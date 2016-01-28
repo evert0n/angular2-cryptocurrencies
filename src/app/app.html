@@ -1,0 +1,24 @@
+<div *ngIf="!rates">Loading...</div>
+
+<!-- can't iterate over an object with ngFor -->
+<div *ngIf="rates">
+  <h1>Crypto currencies</h1>
+  <ul>
+    <li>Ask {{rates.bitcoin.ask}}</li>
+    <li>Bid {{rates.bitcoin.bid}}</li>
+    <li>{{rates.bitcoin._updated}}</li>
+    <li>{{rates.bitcoin._credits}}</li>
+  </ul>
+  <ul>
+    <li>Ask {{rates.dogecoin.ask}}</li>
+    <li>Bid {{rates.dogecoin.bid}}</li>
+    <li>{{rates.dogecoin._updated}}</li>
+    <li>{{rates.dogecoin._credits}}</li>
+  </ul>
+  <ul>
+    <li>Ask {{rates.litecoin.ask}}</li>
+    <li>Bid {{rates.litecoin.bid}}</li>
+    <li>{{rates.litecoin._updated}}</li>
+    <li>{{rates.litecoin._credits}}</li>
+  </ul>
+</div>
